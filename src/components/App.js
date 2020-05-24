@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 import steambot from '../api/steambot';
+import { Menu, Container, Header } from 'semantic-ui-react';
 
-export default class App extends Component {
+class App extends Component {
 
     state = {};
 
@@ -12,12 +12,35 @@ export default class App extends Component {
         console.log(res)
     }
 
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
     render() {
+        const { activeItem } = this.state
+
         return (
             <div>
-                <h1>abc</h1>
-                {/* {this.onRefresh()} */}
+                <Container>
+                    <Header as='h1'>Tuấn Anh</Header>
+                    <Menu>
+                        <Menu.Item
+                            name='home'
+                            active={activeItem === 'home'}
+                            onClick={this.handleItemClick}
+                        >
+                            Home
+                        </Menu.Item>
+                        <Menu.Item
+                            name='bot'
+                            active={activeItem === 'bot'}
+                            onClick={this.handleItemClick}
+                        >
+                            Bot's inventory
+                        </Menu.Item>
+                    </Menu>
+                </Container>
             </div>
         )
     }
-}
+};
+
+export default App;
