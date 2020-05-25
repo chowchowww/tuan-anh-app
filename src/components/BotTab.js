@@ -54,6 +54,8 @@ export default class BotTab extends Component {
                     </Form>
                     <br />
                     <Pagination activePage={this.state.activePage} onPageChange={this.handlePaginationChange} totalPages={3} />
+                    <br />
+                    <br />
                     <ItemList result={this.state.result}/>
                 </Container>
             </div>
