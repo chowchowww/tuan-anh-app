@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import steambot from '../api/steambot';
 import { Menu, Container, Header } from 'semantic-ui-react';
+import BotTab from './BotTab';
 
 class App extends Component {
 
     state = {};
-
-    onRefresh = async () => {
-        const res = await steambot
-            .get('https://steamcommunity.com/inventory/76561199033120983/570/2?l=english&count=5000');
-        console.log(res)
-    }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
@@ -37,6 +31,7 @@ class App extends Component {
                             Bot's inventory
                         </Menu.Item>
                     </Menu>
+                    <BotTab />
                 </Container>
             </div>
         )
