@@ -10,12 +10,11 @@ export default class Item extends Component {
     render() {
         const { name, icon } = this.props;
         let url2 = 'https://steamcommunity-a.akamaihd.net/economy/image/'+icon;
-        console.log(icon)
 
         return (
             <div>
                 <Card>
-                    <Image src={url2} wrapped ui={false} />
+                    <Image src={url2} wrapped ui={false} size='small' />
                     <Card.Content>
                         <Card.Header>
                             {name}

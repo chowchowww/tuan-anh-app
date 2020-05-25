@@ -6,7 +6,7 @@ const ItemList = props => {
     const items = props.result.map(
         (res) => <Item name={res.name} icon={res.icon_url} />
     );
-    return <div><Grid relaxed columns={3}>{items}</Grid></div>
+    return <div><Grid columns={3} centered>{items}</Grid></div>
 }
 
 export default ItemList;
