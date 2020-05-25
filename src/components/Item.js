@@ -14,18 +14,18 @@ export default class Item extends Component {
         return (
             <div>
                 <Card>
-                    <Image src={url2} wrapped ui={false} size='small' />
+                    <Image src={url2} size='small' />
                     <Card.Content>
-                        <Card.Header>
+                        <Card.Header textAlign='left'>
                             {name}
                         </Card.Header>
                     </Card.Content>
-                    <Card.Content extra>
-                    {/* <a> */}
+                    {/* <Card.Content extra>
+                    <a>
                         <Icon name='user' />
                         22 Friends
-                    {/* </a> */}
-                </Card.Content>
+                    </a>
+                    </Card.Content> */}
             </Card>
             </div>
         )
